@@ -1,0 +1,16 @@
+--- bats-0.4.0/install.sh~	2015-05-20 10:35:36.000000000 +0300
++++ bats-0.4.0/install.sh	2015-05-20 10:35:37.614227321 +0300
+@@ -29,9 +29,9 @@
+ 
+ BATS_ROOT="$(abs_dirname "$0")"
+ mkdir -p "$PREFIX"/{bin,libexec,share/man/man{1,7}}
+-cp -R "$BATS_ROOT"/bin/* "$PREFIX"/bin
+-cp -R "$BATS_ROOT"/libexec/* "$PREFIX"/libexec
+-cp "$BATS_ROOT"/man/bats.1 "$PREFIX"/share/man/man1
+-cp "$BATS_ROOT"/man/bats.7 "$PREFIX"/share/man/man7
++cp -Rp "$BATS_ROOT"/bin/* "$PREFIX"/bin
++cp -Rp "$BATS_ROOT"/libexec/* "$PREFIX"/lib
++cp -p "$BATS_ROOT"/man/bats.1 "$PREFIX"/share/man/man1
++cp -p "$BATS_ROOT"/man/bats.7 "$PREFIX"/share/man/man7
+ 
+ echo "Installed Bats to $PREFIX/bin/bats"

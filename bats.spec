@@ -25,7 +25,7 @@ use it to test any UNIX program.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %{__sed} -i -e '1 s,#!.*bash,#!/bin/bash,' libexec/*
 
